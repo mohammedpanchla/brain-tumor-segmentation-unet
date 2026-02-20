@@ -13,7 +13,7 @@ The system is built using **U-Net with VGG16 encoder** and deployed as a **Flask
 
 ### LINK: https://muhammedpanchla-neuroscan-ai.hf.space/#
 
-You can try the model using the MRI images provided in the test_samples/ folder. Simply upload them to the web application (link provided above) or run the Flask app locally to see real tumor segmentation results.
+You can try the model using the MRI images provided in the **test_samples/ folder**. Simply upload them to the web application (link provided above) or run the Flask app locally to see real tumor segmentation results.
 
 ---
 
