@@ -110,17 +110,6 @@ This file contains the fully trained U-Net model with VGG16 encoder and can be u
 * Further fine-tuning
 * Research and experimentation
 
-Example usage in PyTorch:
-
-```python
-import torch
-from model import UNetVGG16
-
-model = UNetVGG16()
-model.load_state_dict(torch.load("model/brain_tumor_segmentation_best_model.pth", map_location="cpu"))
-model.eval()
-```
-
 This ensures reproducibility and allows anyone to use the trained segmentation model without retraining.
 
 ---
