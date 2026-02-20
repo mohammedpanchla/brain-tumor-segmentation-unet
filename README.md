@@ -85,6 +85,45 @@ Output Mask (256×256×1) — tumor probability per pixel
 
 ---
 
+# 🧠 Trained Model
+
+The trained brain tumor segmentation model is publicly available on Hugging Face.
+
+Hugging Face Repository:
+https://huggingface.co/muhammedpanchla/brain-tumor-segmentation-unet-vgg16/tree/main
+
+You can download the final trained model checkpoint file:
+
+brain_tumor_segmentation_best_model.pth
+
+After downloading, place the file inside the following directory:
+
+```
+model/
+└── brain_tumor_segmentation_best_model.pth
+```
+
+This file contains the fully trained U-Net model with VGG16 encoder and can be used directly for:
+
+* Inference
+* Deployment
+* Further fine-tuning
+* Research and experimentation
+
+Example usage in PyTorch:
+
+```python
+import torch
+from model import UNetVGG16
+
+model = UNetVGG16()
+model.load_state_dict(torch.load("model/brain_tumor_segmentation_best_model.pth", map_location="cpu"))
+model.eval()
+```
+
+This ensures reproducibility and allows anyone to use the trained segmentation model without retraining.
+
+---
 ## 📊 Dataset
 
 **Dataset:** LGG Brain MRI Segmentation — [kaggle_3m](https://www.kaggle.com/datasets/mateuszbuda/lgg-mri-segmentation)
